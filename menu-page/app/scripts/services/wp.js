@@ -24,7 +24,7 @@ angular.module('menuPageApp')
         wp.getPosts = function(count,page,category){
 
             var apiurl='';
-            if(category!='all'){
+            if(category!=='all'){
                 apiurl=API_URL+'/api/get_category_posts/?slug='+category+'&count='+count+'&page='+page.toString();
             }else{
                 apiurl=API_URL+'/api/get_posts/?count='+count+'&page='+page.toString();
