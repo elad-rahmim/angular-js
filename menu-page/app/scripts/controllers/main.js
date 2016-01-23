@@ -54,6 +54,6 @@ angular.module('menuPageApp')
                     });
                 }
             }
-        }
+        };
     });
 
