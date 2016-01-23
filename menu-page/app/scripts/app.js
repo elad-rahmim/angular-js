@@ -17,19 +17,37 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider,$locationProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+        .when('/', {
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl',
+            controllerAs: 'main'
+        })
+        .when('/:category', {
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl',
+            controllerAs: 'main'
+        })
+        .when('/viewpost/:postId', {
+            templateUrl: 'views/viewpost.html',
+            controller: 'ViewpostCtrl',
+            controllerAs: 'viewpost'
+        })
+        .when('/main', {
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl',
+            controllerAs: 'main'
+        })
+        .when('/mainpage', {
+            templateUrl: 'views/mainpage.html',
+            controller: 'MainpageCtrl',
+            controllerAs: 'mainpage'
+        })
+        .otherwise({
+            redirectTo: '/all'
+        });
+
+        $locationProvider.hashPrefix('!');
+        //$locationProvider.html5Mode(true);
   });

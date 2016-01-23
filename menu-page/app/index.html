@@ -41,7 +41,7 @@
                             <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
                             <ul class="dropdown-menu" >
                                 <li><a ng-href="#/main/all">All</a></li>
-                                <li ng-repeat="category in categories"><a ng-href="#/main/{{category.slug}}">{{category.title}}</a></li>
+                                <li ng-repeat="category in categories"><a ng-href="#!/{{category.slug}}">{{category.title}}</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -92,6 +92,7 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/wp.js"></script>
         <script src="scripts/controllers/navbar.js"></script>
+        <script src="scripts/controllers/viewpost.js"></script>
         <!-- endbuild -->
 </body>
 </html>
