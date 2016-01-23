@@ -11,10 +11,10 @@ angular.module('menuPageApp')
   .factory('wp', function ($q, $http) {
     // Service logic
     // ...
-    var url = 'www.offerstake.com';
+    var url = 'http://www.offerstake.com';
     var wp = {};
 
-    wp.getCategory = function(){
+    wp.getCategories = function(){
         return $http.get(url + '/api/get_category_index/');
     };
     wp.getPost = function(postId){
